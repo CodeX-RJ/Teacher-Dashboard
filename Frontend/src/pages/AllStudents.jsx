@@ -58,9 +58,9 @@ const handleDelete = async(id) => {
       try {
         let response
         if (selectedClass && selectedClass !== 'All') {
-          response = await axios.get(`http://localhost:5000/api/students/class/${selectedClass}`)
+          response = await axios.get(`https://teacher-dashboard-cjkx.onrender.com/api/students/class/${selectedClass}`)
         } else {
-          response = await axios.get('http://localhost:5000/api/students')
+          response = await axios.get('https://teacher-dashboard-cjkx.onrender.com/api/students')
         }
         setAllStudents(response.data)
       } catch (error) {
