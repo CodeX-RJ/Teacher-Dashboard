@@ -11,7 +11,7 @@ const RecentStudents = () => {
     const fetchRecentStudents = async () => {
       setLoading(true)
       try {
-        const response = await axios.get('http://localhost:5000/api/students/recent/last10')
+        const response = await axios.get('https://teacher-dashboard-cjkx.onrender.com/api/students/recent/last10')
         setRecentStudents(response.data)
       } catch (error) {
         console.error('Error fetching recent students:', error)

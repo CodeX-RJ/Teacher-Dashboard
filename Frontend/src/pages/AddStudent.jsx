@@ -32,7 +32,7 @@ const AddStudent = () => {
     e.preventDefault();
     setSubmitting(true);
     try {
-      await axios.post("http://localhost:5000/api/students", student);
+      await axios.post("https://teacher-dashboard-cjkx.onrender.com/api/students", student);
       alert("✅ Student added successfully!");
       setStudent({
         studentId: "",

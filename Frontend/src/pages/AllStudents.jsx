@@ -42,7 +42,7 @@ const handleDelete = async(id) => {
   if (confirmDelete) {
     // Proceed with deletion
     try {
-      await axios.delete(`http://localhost:5000/api/students/${id}`);
+      await axios.delete(`https://teacher-dashboard-cjkx.onrender.com/api/students/${id}`);
       // Refresh the student list after deletion
       setAllStudents(allStudents.filter(student => student._id !== id));
     } catch (error) {

@@ -26,7 +26,7 @@ const EditStudent = () => {
   useEffect(() => {
     const fetchStudent = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/students/${id}`);
+        const response = await axios.get(`https://teacher-dashboard-cjkx.onrender.com/api/students/${id}`);
         setStudent(response.data);
       } catch (error) {
         console.error("Error fetching student:", error);
@@ -45,7 +45,7 @@ const EditStudent = () => {
     e.preventDefault();
     setSubmitting(true);
     try {
-      await axios.patch(`http://localhost:5000/api/students/${id}`, student);
+      await axios.patch(`https://teacher-dashboard-cjkx.onrender.com/api/students/${id}`, student);
       alert("✅ Student updated successfully!");
       navigate("/students");
     } catch (error) {

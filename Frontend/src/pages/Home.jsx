@@ -13,9 +13,9 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const [classRes, studentRes, recentRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/students/classes/total'),
-          axios.get('http://localhost:5000/api/students/count/total'),
-          axios.get('http://localhost:5000/api/students/count/recent/additions'),
+          axios.get('https://teacher-dashboard-cjkx.onrender.com/api/students/classes/total'),
+          axios.get('https://teacher-dashboard-cjkx.onrender.com/api/students/count/total'),
+          axios.get('https://teacher-dashboard-cjkx.onrender.com/api/students/count/recent/additions'),
         ])
 
         setAllClasses(classRes.data.totalClasses)
